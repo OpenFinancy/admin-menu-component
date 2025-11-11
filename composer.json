@@ -1,0 +1,64 @@
+{
+    "name": "openfinancy/admin-menu-component",
+    "description": "Composite-based admin menu building blocks shared across OpenFinancy projects.",
+    "keywords": [
+        "openfinancy",
+        "symfony",
+        "admin",
+        "menu",
+        "composite"
+    ],
+    "homepage": "https://github.com/openfinancy/admin-menu-component",
+    "authors": [
+        {
+            "name": "OpenFinancy",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Nicolas Méloni",
+            "homepage": "https://github.com/TheGrimmChester",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/openfinancy/admin-menu-component/issues",
+        "source": "https://github.com/openfinancy/admin-menu-component"
+    },
+    "type": "library",
+    "license": "EUPL-1.2",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.59",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenFinancy\\Component\\AdminMenu\\": "src/AdminMenu/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenFinancy\\Component\\AdminMenu\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "analyse": "vendor/bin/phpstan analyse",
+        "lint": "vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "format": "vendor/bin/php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    }
+}
+
